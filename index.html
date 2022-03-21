@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-image: url("Dark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.class{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(1, 72, 85);
+    font-size: 300%;
+    
+}
+#topic{
+    font-size:200%;
+    color : white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.intro{
+    padding: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+button:hover{
+    background:#00a2ff50;
+}
+button{
+    font-size: x-large;
+    background:#1e444650;
+    color: silver;
+}
+#dif{
+    text-align: right;
+    font-size: xx-large;
+} 
+#dis{
+    background-image: url("Adi.jpg");
+    background-repeat: no-repeat;
+    background-size:300px;
+    position: absolute;
+    top: 160px;
+    right:400px;
+    
+}
+</style>
+<body>
+    <div class="class my-4">HAPPY BIRTHDAY ADITHYA BHAI!<br></div><br>
+    <div id="dis"><img src = "Adi.jpg"></div>
+    <div id="topic"><b></b>Look Through Some Of Our Pics</div>
+    <div class="intro">
+        <button onclick="display(0)">Human confirmation👨✅</button><br><br>
+        <button onclick="display(1)">Billiards🎱</button><br><br>
+        <button onclick="display(2)">Chick-looks😉</button><br><br>
+        <button onclick="display(3)">DubaiMall🏙️</button><br><br>
+        <button onclick="display(4)">Metro🚇 </button><br><br>
+        <button onclick="display(5)">Pic With Namone🤣</button><br><br>
+        <button onclick="display(6)">G.V🌎🏞️</button><br><br>
+        <button onclick="display(7)">Stranded You And Advyth😂</button><br><br>
+        <button onclick="display(8)">Habibi-Dress👳</button><br><br>
+        <button onclick="display(9)">SpiderMan Farewell 🤧</button><br><br>
+        <button onclick="display(10)">Delicious Food😋</button><br><br>
+        <button onclick="display(11)">Wouldn't Press That If I Were You👀</button>
+        
+    </div>
+    <div id="dif"><button onclick="goback()">Wanna go back</button></div>
+
+</body>
+<script>
+let dic={"0":"Human.jpg","1":"Billiards.jpg","2" :"Goodlooks.jpg","3" :"DubaiMall.jpg","4":"Metro.jpg","5":"PicWithNamone.jpg","6":"G.V.jpg","7":"Stranded.jpg","8" :"Habibi-Dress.jpg","9":"Spiderman.jpg","10":"Food.jpg","11":"S.jpg"};
+document.body.style.backgroundSize ="cover";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundPosition = "center";
+
+function display(n) 
+{
+    let d=dic[n];
+    document.body.style.backgroundImage = "url"+'('+d+')';
+    document.getElementById("topic").style.display = "none";
+    document.getElementById("dis").style.display = "none";
+    let a=document.getElementsByClassName("intro")
+    for (var i=0;i<a.length; i++)
+    {
+        a[i].style.visibility = 'hidden';
+    }
+}
+    
+function goback()
+{
+    history.go();
+}    
+
+</script>
+</html>
